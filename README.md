@@ -25,7 +25,7 @@ ant inst
 ant gendb
 ant genimg (can be skipped)
 ```
-Remember to check if "mysql-connector-java-5.1.47.jar" is placed in "apache-tomcat-7.0.106/webapps/tpcw/WEB-INF/lib". 
+Remember to check if "mysql-connector-java-5.1.47.jar" is placed in "apache-tomcat-7.0.106/webapps/tpcw/WEB-INF/lib".   
 Access the homepage of the server at:   
 ```
 http://localhost:8080/tpcw/TPCW_home_interaction
