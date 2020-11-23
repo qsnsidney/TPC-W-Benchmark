@@ -60,6 +60,8 @@ int main (int argc, char **argv)
 	 
 	/* Specify data destination for compression */ 
 	if((outfile = fopen(argv[2], "wb")) == NULL) { 
+		printf("lalala\n");
+		printf("%s\n", argv[2]);
 		printf("Can't open file...\n"); 
 		exit(1); 
 	} 

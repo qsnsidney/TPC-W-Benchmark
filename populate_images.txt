@@ -1,3 +1,5 @@
+DEST_DIR: /Users/sining/Documents/MEng/ECE1747/project/TPC-W-Benchmark/apache-tomcat-7.0.106/webapps/Images, 
+ GEN_CMD: ../tpcw/ImgGen/ImgFiles/tpcwIMG
 size ~= 5120 bytes, dimension = 44
 size ~= 256000 bytes, dimension = 356
 size ~= 5120 bytes, dimension = 44

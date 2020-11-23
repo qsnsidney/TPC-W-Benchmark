@@ -19,6 +19,7 @@ $NUM_ITEMS = @num.item@;
 $DEST_DIR='@images.path@';
 #$GEN_CMD='../ImgGen/ImgFiles/tpcwIMG';
 $GEN_CMD='@imagesGen.path@/ImgFiles/tpcwIMG';
+print "DEST_DIR: $DEST_DIR, \n GEN_CMD: $GEN_CMD\n";
 
 #Create the directories that will store the images. 
 #for ($i = 0; $i < $NUM_ITEMS/100; $i++ ) {
