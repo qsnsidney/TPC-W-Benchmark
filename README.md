@@ -1,3 +1,32 @@
+Original repo: https://github.com/supunab/TPC-W-Benchmark  
+Required Java Version: 5 or 8  
+The other two required packages (Apache Tomcat and mysql-connector-java driver) are included already.  
+Copy "my.cnf" into the etc folder of your mysql installation, e.g. at /usr/local/mysql/etc/ (Mac).  
+To start/terminate mysql server (Mac):
+```
+cd /usr/local/mysql/support-files
+mysql.server start
+mysql.server stop
+```
+To start/terminate the Apache Tomcat server:  
+```
+cd apache-tomcat-7.0.106/bin
+sh start.sh
+sh shutdown.sh
+```
+To compile this directory:  
+```
+ant clean
+ant mksrc
+ant build
+ant dist
+ant docs
+ant inst
+ant gendb
+ant genimg (can be skipped)
+```
+Remember to check if "mysql-connector-java-5.1.47.jar" is placed in "apache-tomcat-7.0.106/webapps/tpcw/WEB-INF/lib". 
+
 # TPC-W Benchmark
 TPC-W is a popular transactional web benchmark which is used widely for performance benchmarking. TPC-W specifies a specification for a web e-Commerce web application. This repository contains an implementation of that specification using Java Servlets.
 
