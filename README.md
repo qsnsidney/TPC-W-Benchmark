@@ -26,6 +26,15 @@ ant gendb
 ant genimg (can be skipped)
 ```
 Remember to check if "mysql-connector-java-5.1.47.jar" is placed in "apache-tomcat-7.0.106/webapps/tpcw/WEB-INF/lib". 
+Access the homepage of the server at:   
+```
+http://localhost:8080/tpcw/TPCW_home_interaction
+```
+Currently, max connections is set to 100. Try load generation with less than 100 clients (10 here):   
+```
+cd dist
+java rbe.RBE -EB rbe.EBTPCW1Factory 10 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1000 -TT 0.1 -MAXERROR 0 -WWW http://localhost:8080/tpcw/
+```
 
 # TPC-W Benchmark
 TPC-W is a popular transactional web benchmark which is used widely for performance benchmarking. TPC-W specifies a specification for a web e-Commerce web application. This repository contains an implementation of that specification using Java Servlets.
