@@ -1,5 +1,5 @@
 Original repo: https://github.com/supunab/TPC-W-Benchmark  
-Required Java Version: 5 or 8
+Required Java Version: 5 or 8  
 The other two required packages (Apache Tomcat and mysql-connector-java driver) are included already.  
 Copy "my.cnf" into the etc folder of your mysql installation, e.g. at /usr/local/mysql/etc/ (Mac).  
 To start/terminate mysql server (Mac):
