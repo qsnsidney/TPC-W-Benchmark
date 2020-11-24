@@ -1,3 +1,4 @@
+### How to run
 Original repo: https://github.com/supunab/TPC-W-Benchmark  
 Required Java Version: 5 or 8  
 The other two required packages (Apache Tomcat and mysql-connector-java driver) are included already.  
@@ -35,6 +36,8 @@ Currently, max connections is set to 100. Try load generation with less than 100
 cd dist
 java rbe.RBE -EB rbe.EBTPCW1Factory 10 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1000 -TT 0.1 -MAXERROR 0 -WWW http://localhost:8080/tpcw/
 ```
+### Some findings
+* A new transaction begins when a function in "TPCW_Database.java" calls "new tx.TransactionalCommand", there we know exactly what sql queries will be made, thus can manully add the "BEGIN" query.  
 
 # TPC-W Benchmark
 TPC-W is a popular transactional web benchmark which is used widely for performance benchmarking. TPC-W specifies a specification for a web e-Commerce web application. This repository contains an implementation of that specification using Java Servlets.
