@@ -15,6 +15,12 @@ cd apache-tomcat-7.0.106/bin
 sh start.sh
 sh shutdown.sh
 ```
+To configure jdbc, edit tpcw.properties. Specifically, enable it to connect to mysql server by change jdbc.path  
+```
+jdbc.path=jdbc:mysql://<ip>:<port>/<database_name>?user=<username>&password=<pwd>&useUnicode=true&characterEncoding=utf-8&
+e.g. jdbc.path=jdbc:mysql://localhost:3400/tpcw?user=root&password=tpcw1234&useUnicode=true&characterEncoding=utf-8&
+```
+Note: default mysql server is at port 3306. If we want to forward the communication between tomcat server and mysql server, we should give jdbc the port our forwarder is at.  
 To compile this directory:  
 ```
 ant clean
