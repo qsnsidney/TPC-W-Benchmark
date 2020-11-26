@@ -44,6 +44,7 @@ java rbe.RBE -EB rbe.EBTPCW1Factory 10 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1
 ```
 ### Some findings
 * A new transaction begins when a function in "TPCW_Database.java" calls "new tx.TransactionalCommand", there we know exactly what sql queries will be made, thus can manully add the "BEGIN" query.  
+* By default, no compression, no encryption (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html).
 
 # TPC-W Benchmark
 TPC-W is a popular transactional web benchmark which is used widely for performance benchmarking. TPC-W specifies a specification for a web e-Commerce web application. This repository contains an implementation of that specification using Java Servlets.
