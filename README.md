@@ -20,7 +20,7 @@ To configure jdbc, edit tpcw.properties. Specifically, enable it to connect to m
 jdbc.path=jdbc:mysql://<ip>:<port>/<database_name>?user=<username>&password=<pwd>&useUnicode=true&characterEncoding=utf-8&
 e.g. jdbc.path=jdbc:mysql://localhost:3400/tpcw?user=root&password=tpcw1234&useUnicode=true&characterEncoding=utf-8&
 ```
-Note: default mysql server is at port 3306. If we want to forward the communication between tomcat server and mysql server, we should give jdbc the port our forwarder is at.  
+Note: default mysql server is at port 3306. If we want to forward the communication between tomcat server and mysql server, we should give jdbc the port our forwarder (see forwarder.py for an example) is at.  
 To compile this directory:  
 ```
 ant clean
@@ -44,6 +44,7 @@ java rbe.RBE -EB rbe.EBTPCW1Factory 10 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1
 ```
 ### Some findings
 * A new transaction begins when a function in "TPCW_Database.java" calls "new tx.TransactionalCommand", there we know exactly what sql queries will be made, thus can manully add the "BEGIN" query.  
+* By default, no compression, no encryption (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html).
 
 # TPC-W Benchmark
 TPC-W is a popular transactional web benchmark which is used widely for performance benchmarking. TPC-W specifies a specification for a web e-Commerce web application. This repository contains an implementation of that specification using Java Servlets.
