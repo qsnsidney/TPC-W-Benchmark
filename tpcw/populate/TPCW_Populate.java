@@ -103,6 +103,10 @@ class TPCW_Populate {
 	rand = new Random();
 	getConnection();
 	deleteTables();
+
+	closeConnection();
+	getConnection();
+
 	createTables();
 	populateAddressTable();
 	populateAuthorTable();
