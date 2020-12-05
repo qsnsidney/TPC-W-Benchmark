@@ -17,8 +17,8 @@
   	<target name="init">
     		<tstamp/>
 
-                <property name="NUM_EBS" value="600" /> <!-- default: 10 -->
-                <property name="NUM_ITEMS" value="1000" /> <!-- default: 1000 -->
+                <property name="NUM_EBS" value="60" /> <!-- default: 10 -->
+                <property name="NUM_ITEMS" value="100" /> <!-- default: 1000 -->
 
 		<!-- 	This file contains important properties 
 			you might want to change according to your needs -->
