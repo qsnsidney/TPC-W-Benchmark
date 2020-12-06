@@ -51,10 +51,18 @@ TPC-W is a popular transactional web benchmark which is used widely for performa
 
 Source Code from : https://github.com/jopereira/java-tpcw
 ### Additonal Setup on Google Cloud Debian 10 image
+## Required installation
+```
+sudo apt-get install git
+sudo apt-get install ant
+```
+## Set up postgres user
+```
 sudo -u postgres psql
 create database tpcw;
 create user tpcw_user with encrypted password 'mypass';
 grant all privileges on database tpcw to tpcw_user;
+```
 
 ## Installation
 ### Setting up the requirements
