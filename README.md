@@ -42,6 +42,13 @@ Currently, max connections is set to 100. Try load generation with less than 100
 cd dist
 java rbe.RBE -EB rbe.EBTPCW1Factory 10 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1000 -TT 0.1 -MAXERROR 0 -WWW http://localhost:8080/tpcw/
 ```
+### Additional Setup
+For postgresql to be able to recognize "soundex", type the following in psql shell:  
+```
+CREATE EXTENSION fuzzystrmatch SCHEMA public;
+SELECT n.nspname FROM pg_extension e JOIN pg_namespace n ON e.extnamespace = n.oid WHERE e.extname = 'fuzzystrmatch';
+```
+If the second command returns something, "fuzzystrmatch" extension that contains "soundex" is successfully added.
 ### Some findings
 * A new transaction begins when a function in "TPCW_Database.java" calls "new tx.TransactionalCommand", there we know exactly what sql queries will be made, thus can manully add the "BEGIN" query.  
 * By default, no compression, no encryption (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html).
