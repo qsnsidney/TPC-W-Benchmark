@@ -50,6 +50,11 @@ java rbe.RBE -EB rbe.EBTPCW1Factory 10 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1
 TPC-W is a popular transactional web benchmark which is used widely for performance benchmarking. TPC-W specifies a specification for a web e-Commerce web application. This repository contains an implementation of that specification using Java Servlets.
 
 Source Code from : https://github.com/jopereira/java-tpcw
+### Additonal Setup on Google Cloud Debian 10 image
+sudo -u postgres psql
+create database tpcw;
+create user tpcw_user with encrypted password 'mypass';
+grant all privileges on database tpcw to tpcw_user;
 
 ## Installation
 ### Setting up the requirements
