@@ -94,8 +94,13 @@ perf
 ```
 
 ### Analyze the result
+Single run analysis
 ```bash
 python3 -m analyzer single ./perf/xx
+```
+Multi run analysis
+```bash
+python3 -m analyzer multi ./perf
 ```
 
 ## OLD
