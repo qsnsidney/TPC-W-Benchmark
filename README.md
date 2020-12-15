@@ -73,11 +73,11 @@ cargo build --release
 ```bash
 cd dv-in-rust
 
-cargo run --release -- --dbproxy 0
-cargo run --release -- --dbproxy 1
+cargo run --release -- -c ./configug.toml --dbproxy 0
+cargo run --release -- -c ./configug.toml --dbproxy 1
 # ...
-cargo run --release -- --sequencer
-cargo run --release -- --scheduler
+cargo run --release -- -c ./configug.toml --sequencer
+cargo run --release -- -c ./configug.toml --scheduler
 ```
 
 ### Run load generator
