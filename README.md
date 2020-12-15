@@ -9,17 +9,17 @@ make
 make install
 ```
 
+### Start the Postgres
+```bash
+postgres -D ../data2 -h 127.0.0.1 -p 33333 &
+```
+
 ### Create a new database
 ```bash
 # ../data2 is the storage dir for database
 initdb -D ../data2 -U qinsinin
 # must specify the host, port and username
 createdb -U qinsinin -h 127.0.0.1 -p 33333 tpcw
-```
-
-### Start the Postgres
-```bash
-postgres -D ../data2 -h 127.0.0.1 -p 33333 &
 ```
 
 ### Connect to Postgres
