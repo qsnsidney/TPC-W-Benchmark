@@ -1,6 +1,6 @@
 # Instructions on UG
 
-## Postgres
+## 1.0 Postgres
 
 ### Install Postgres
 ```bash
@@ -33,7 +33,7 @@ psql -U qinsinin -h 127.0.0.1 -p 33333 tpcw
 3. each database must have a separate storage (ie. ../data2, or ../data3)
 
 
-## TPCW
+## 2.0 TPCW
 
 ### Modify tpcw.properties
 ```conf
@@ -53,7 +53,7 @@ ant inst
 ant gendb
 ```
 
-## o2versioner
+## 3.0 o2versioner
 
 ### Update rust compiler
 ```bash
