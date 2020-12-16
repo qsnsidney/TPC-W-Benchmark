@@ -80,13 +80,6 @@ cargo run --release -- -c ./confug.toml --sequencer
 cargo run --release -- -c ./confug.toml --scheduler
 ```
 
-### Run load generator
-```bash
-cd dv-in-rust
-cd load_generator
-python3 launcher.py --range 0 40 --mix 3
-```
-
 ### Dump perf
 ```bash
 netcat 127.0.0.1 19999
@@ -105,7 +98,7 @@ python3 -m analyzer multi ./perf
 
 ## 4.0 Launch scripts
 Single client  
-```
+```bash
 python3 client.py --c_id <any non-negative int> --mix <0-4> --port 2077 --ip <default remote> 
 optional (default 0): 
   --debug 1 or 0: on/off logging to stdout
@@ -113,7 +106,7 @@ optional (default 0):
   --ssh 1 or 0: on/off using remote script path
 ```
 Multiple clients on the same machine
-```
+```bash
 python3 launcher.py --range <two arguments, e.g. 0 40> --mix <0-4> --port 2077 --ip <default remote>
 optional (default off; adding turns on):
   --debug: on/off logging to stdout
@@ -121,15 +114,16 @@ optional (default off; adding turns on):
   --ssh: on/off using remote script path
 ```
 Multiple clients over multiple machine
-```
+```bash
 python3 ssh_launcher.py --password <...> --client_num <total number> --mix <0-4>
 optional (default off; adding turns on):
   --debug: on/off logging to stdout
   --mock_db: on/off reading from database response
 ```
 Multiple dbproxy
-```
+```bash
 python3 ssh_db_launcher.py --password <...> --db_num <total number> 
 ```
+
 ## OLD
 Refer to: [README.MD](README.old.md)
