@@ -103,5 +103,33 @@ Multi run analysis
 python3 -m analyzer multi ./perf
 ```
 
+## 4.0 Launch scripts
+Single client  
+```
+python3 client.py --c_id <any non-negative int> --mix <0-4> --port 2077 --ip <default remote> 
+optional (default 0): 
+  --debug 1 or 0: on/off logging to stdout
+  --mock_db 1 or 0: on/off reading from database response
+  --ssh 1 or 0: on/off using remote script path
+```
+Multiple clients on the same machine
+```
+python3 launcher.py --range <two arguments, e.g. 0 40> --mix <0-4> --port 2077 --ip <default remote>
+optional (default off; adding turns on):
+  --debug: on/off logging to stdout
+  --mock_db: on/off reading from database response
+  --ssh: on/off using remote script path
+```
+Multiple clients over multiple machine
+```
+python3 ssh_launcher.py --password <...> --client_num <total number> --mix <0-4>
+optional (default off; adding turns on):
+  --debug: on/off logging to stdout
+  --mock_db: on/off reading from database response
+```
+Multiple dbproxy
+```
+python3 ssh_db_launcher.py --password <...> --db_num <total number> 
+```
 ## OLD
 Refer to: [README.MD](README.old.md)
