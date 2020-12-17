@@ -129,7 +129,7 @@ python3 ssh_db_launcher.py --password <...> --db_num <total number>
 Currently working on clients launcher, which is blocked by hard coded path in the script
 
 (Auto Perf) Launch Scheduler + Sequencer + Dbproxies from conf.toml
-```
+```bash
 # Scheduler + Sequencer: on current machine, ignoring toml setting
 # Dbproxies: follows toml setting
 # remove_dv: absolute path points to any dv-in-rust
@@ -138,7 +138,7 @@ Currently working on clients launcher, which is blocked by hard coded path in th
 python3 launcher/master.py --conf=confug.toml --remote_dv=/groups/qlhgrp/liuli15/dv-in-rust --username=xx --password=xx --duration=300
 ```
 Clients:
-```
+```bash
 # ip and addr needs to point to scheduler
 cd load_generator
 python3 ssh_launcher.py --username=xx --password=xx --client_num 100 --port scheduler_port --ip scheduler_ip --mix 3 --mock_db
