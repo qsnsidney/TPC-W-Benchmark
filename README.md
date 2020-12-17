@@ -133,7 +133,7 @@ python3 ssh_db_launcher.py --password <...> --db_num <total number>
 # remove_dv: absolute path points to any dv-in-rust
 # duration: Total time to run the system, auto-perf at the end.
 # Need to run on ug machine
-python3 launcher/master.py --conf=confug.toml --remote_dv=/groups/qlhgrp/liuli15/dv-in-rust --username= --password= --duration=70 --client_num=100 --client_mix=2
+python3 launcher/master.py --conf=confug.toml --remote_dv=/groups/qlhgrp/liuli15/dv-in-rust --username= --password= --duration=300 --client_num=100 --client_mix=2
 ```
 
 
